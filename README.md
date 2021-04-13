@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to my branch of the Pricelists!
 
 
 This Repo is for the Rimworld Mod "TwitchToolkit" and is the Pricelist for Traits, Items, Events and Races for Ingame purchases with coins you earn by watching the Streamer.
