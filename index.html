@@ -233,23 +233,6 @@
 
             itemList = new List('items', options, itemData);
         });
-		
-		let traitList = null;
-        $.getJSON(traitListURL, function(data) {
-            var options = {
-                valueNames: ['name', 'addprice', 'removeprice'],
-                item: '<tr><td class="name" scope="row"></td><td class="addprice"></td><td class="removeprice"></td></tr>'
-            };
-
-            var traitData = [];
-            $.each(data.trait, function(index, value) {
-                if (value["addprice"] > 0) {
-                    traitData.push(value);
-                }
-            });
-
-            traitList = new List('traits', options, itemData);
-        });
 
         let eventList = null;
         $.getJSON(eventListURL, function(data) {
@@ -275,6 +258,40 @@
         $("#item-price-max").keyup(function() {
             updateItemFilter();
         });
+		
+		let traitList = null;
+        $.getJSON(traitListURL, function(data) {
+            var options = {
+                valueNames: ['name', 'addprice', 'removeprice'],
+                item: '<tr><td class="name" scope="row"></td><td class="addprice"></td><td class="removeprice"></td></tr>'
+            };
+
+            var traitData = [];
+            $.each(data.trait, function(index, value) {
+                if (value["addprice"] > 0) {
+                    traitData.push(value);
+                }
+            });
+
+            traitList = new List('traits', options, traitData);
+        });
+		
+		let raceList = null;
+        $.getJSON(raceListURL, function(data) {
+            var options = {
+                valueNames: ['name', 'price'],
+                item: '<tr><td class="name" scope="row"></td><td class="price"></td></tr>'
+            };
+
+            var raceData = [];
+            $.each(data.race, function(index, value) {
+                if (value["addprice"] > 0) {
+                    raceData.push(value);
+                }
+            });
+
+            raceList = new List('races', options, raceData);
+        });
 
         function updateItemFilter() {
             var minPrice = $("#item-price-min").val();
@@ -289,7 +306,27 @@
                 }
                 return allow;
             });
-	    eventList.filter(function(item) {
+			eventList.filter(function(item) {
+                var allow = true;
+                if (minPrice != "" && parseInt(item.values().price) < minPrice) {
+                    allow = false;
+                }
+                if (maxPrice != "" && parseInt(item.values().price) > maxPrice) {
+                    allow = false;
+                }
+                return allow;
+            });
+			traitList.filter(function(item) {
+                var allow = true;
+                if (minPrice != "" && parseInt(item.values().price) < minPrice) {
+                    allow = false;
+                }
+                if (maxPrice != "" && parseInt(item.values().price) > maxPrice) {
+                    allow = false;
+                }
+                return allow;
+            });
+			raceList.filter(function(item) {
                 var allow = true;
                 if (minPrice != "" && parseInt(item.values().price) < minPrice) {
                     allow = false;
