@@ -13,9 +13,9 @@
     <title>Hodl's Item List</title>
     <script type="text/javascript">
         const itemListURL = "https://raw.githubusercontent.com/BacNang/bacnang/master/StoreItems.json";
-        const eventListURL = "https://raw.githubusercontent.com/BacNang/bacnang/master/StoreEvents.json";
-	const traitListURL = "https://raw.githubusercontent.com/BacNang/bacnang/master/StoreEvents.json";
-	const raceListURL = "https://raw.githubusercontent.com/BacNang/bacnang/master/StoreEvents.json";
+        const eventListURL = "https://raw.githubusercontent.com/BacNang/bacnang/master/StoreIncidents.json";
+		const traitListURL = "https://raw.githubusercontent.com/BacNang/bacnang/master/traits.json";
+		const raceListURL = "https://raw.githubusercontent.com/BacNang/bacnang/master/pawnkinds.json";
     </script>
 </head>
 
@@ -70,10 +70,10 @@
                                     <button class="btn btn-success" ng-class="{'active': (selected == '2')}" ng-click='selected=2'>
                                         Events
                                     </button>
-				    <button class="btn btn-success" ng-class="{'active': (selected == '3')}" ng-click='selected=3'>
+									<button class="btn btn-success" ng-class="{'active': (selected == '3')}" ng-click='selected=3'>
                                         Traits
                                     </button>
-				    <button class="btn btn-success" ng-class="{'active': (selected == '4')}" ng-click='selected=4'>
+									<button class="btn btn-success" ng-class="{'active': (selected == '4')}" ng-click='selected=4'>
                                         Races
                                     </button>
                                 </div>
@@ -228,6 +228,26 @@
             $.each(data.items, function(index, value) {
                 if (value["price"] > 0) {
                     itemData.push(value);
+                }
+            });
+
+            itemList = new List('items', options, itemData);
+        });
+		
+		let traitList = null;
+        $.getJSON(traitListURL, function(data) {
+            var options = {
+                valueNames: ['name', 'addprice', 'removeprice'],
+                item: '<tr><td class="name" scope="row"></td><td class="addprice"></td><td class="removeprice"></td></tr>'
+            };
+
+            var traitData = [];
+            $.each(data.trait, function(index, value) {
+                if (value["addprice"] > 0) {
+                    traitData.push(value);
+                }
+				if (value["removeprice"] > 0) {
+                    traitData.push(value);
                 }
             });
 

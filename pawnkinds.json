@@ -1,0 +1,101 @@
+[
+  {
+    "price": 2917,
+    "defName": "Human",
+    "enabled": true,
+    "name": "human",
+    "data": {
+      "customName": false
+    }
+  },
+  {
+    "price": 3333,
+    "defName": "AFerian",
+    "enabled": true,
+    "name": "Ferian",
+    "data": {
+      "customName": false
+    }
+  },
+  {
+    "price": 5833,
+    "defName": "ReviaRaceAlien",
+    "enabled": true,
+    "name": "Revia",
+    "data": {
+      "customName": false
+    }
+  },
+  {
+    "price": 3167,
+    "defName": "Alien_TrenchCat",
+    "enabled": true,
+    "name": "trenchcat",
+    "data": {
+      "customName": false
+    }
+  },
+  {
+    "price": 5000,
+    "defName": "Vulpes",
+    "enabled": true,
+    "name": "Vulpes",
+    "data": {
+      "customName": false
+    }
+  },
+  {
+    "price": 3333,
+    "defName": "Alien_Nyaron",
+    "enabled": true,
+    "name": "Nyaron",
+    "data": {
+      "customName": false
+    }
+  },
+  {
+    "price": 2917,
+    "defName": "Alien_Bunlander",
+    "enabled": true,
+    "name": "Bun",
+    "data": {
+      "customName": false
+    }
+  },
+  {
+    "price": 2917,
+    "defName": "Alien_BunTribeNew",
+    "enabled": true,
+    "name": "Bun",
+    "data": {
+      "customName": false
+    }
+  },
+  {
+    "price": 2917,
+    "defName": "Alien_BunTribe",
+    "enabled": true,
+    "name": "Bun",
+    "data": {
+      "customName": false
+    }
+  },
+  {
+    "price": 833,
+    "defName": "Alien_Mantodean",
+    "enabled": true,
+    "name": "Mantodean",
+    "data": {
+      "customName": false
+    }
+  },
+  {
+    "price": 4167,
+    "defName": "Thrumkin",
+    "enabled": true,
+    "name": "thrumkin",
+    "data": {
+      "customName": false
+    }
+  }
+]
