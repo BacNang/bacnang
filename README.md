@@ -1,8 +1,13 @@
 ## Welcome to GitHub Pages
 
 
-1. Clone Repo
-2. Upload your itemlist.json and eventlist.json
+This Repo is for the Rimworld Mod "TwitchToolkit" and is the Pricelist for Traits, Items, Events and Races for Ingame purchases with coins you earn by watching the Streamer.
 
 
-This Repo is for Rimworld!
+Changelog ----
+
+13.04.2021 - 17:00
+- Updated pricelists for Items and Events
+- Added "Traits" and "Races" Tab to the Pricelist, known not to work yet
+- Added "StoreIncidents" and changes "StoreEvents" to "StoreIncidents" in index.html
+- Added new Sorting for "Traits" and "Races"
