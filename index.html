@@ -246,12 +246,9 @@
                 if (value["addprice"] > 0) {
                     traitData.push(value);
                 }
-				if (value["removeprice"] > 0) {
-                    traitData.push(value);
-                }
             });
 
-            itemList = new List('items', options, itemData);
+            traitList = new List('traits', options, itemData);
         });
 
         let eventList = null;
